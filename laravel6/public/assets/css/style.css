@@ -16,7 +16,7 @@ body {
     width: 100vw;
     max-height: 100vh;
     height: 100vh;
-    background-image: url(./assets/image/bg-main.png);
+    background-image: url(../image/bg-main.png);
     background-size: cover;
     padding: 20px;
 }
@@ -59,7 +59,7 @@ body {
     width: 50px;
     height: 50px;
 
-    opacity: 70%; 
+    opacity: 70%;
     opacity: 100%;
 }
 
@@ -149,14 +149,33 @@ body {
 }
 
 .content #page-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
 
+    width: 100%;
     padding: 0 20px;
 
     color: #F7F7F7;
+}
+
+.content #page-title .btn-add {
+    padding: 5px 10px;
+    border: 1px solid #F6F6F6;
+    border-radius: 3px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+
+    color: #F6F6F6;
+    text-decoration: none;
 }
 
 .content #content-inner {
@@ -184,4 +203,11 @@ body {
 .content #content-inner::-webkit-scrollbar-thumb {
     background-color: rgba(248, 248, 248, 0.26);
     outline: 1px solid rgba(178, 181, 184, 0.5);
+}
+
+@media (max-width: 767px) {
+    .content,
+    .content #content-inner {
+        padding: 10px 5px;
+    }
 }
