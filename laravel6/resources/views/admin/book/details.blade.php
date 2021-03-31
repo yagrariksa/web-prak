@@ -18,14 +18,14 @@
 
 @section('content')
     <div class="image-preview">
-        <img class="preview" src="../assets/image/dump-image.png" alt="">
+        <img class="preview" src="{{ url('assets/image/dump-image.png') }}" alt="">
         <div class="img-thumb-list">
-            <img src="../assets/image/dump-image.png" alt="" class="thumb">
-            <img src="../assets/image/dump-image.png" alt="" class="thumb">
-            <img src="../assets/image/dump-image.png" alt="" class="thumb">
-            <img src="../assets/image/dump-image.png" alt="" class="thumb">
-            <img src="../assets/image/dump-image.png" alt="" class="thumb">
-            <img src="../assets/image/dump-image.png" alt="" class="thumb">
+            <img src="{{ url('assets/image/dump-image.png') }}" alt="" class="thumb">
+            <img src="{{ url('assets/image/dump-image.png') }}" alt="" class="thumb">
+            <img src="{{ url('assets/image/dump-image.png') }}" alt="" class="thumb">
+            <img src="{{ url('assets/image/dump-image.png') }}" alt="" class="thumb">
+            <img src="{{ url('assets/image/dump-image.png') }}" alt="" class="thumb">
+            <img src="{{ url('assets/image/dump-image.png') }}" alt="" class="thumb">
         </div>
     </div>
 
@@ -41,8 +41,8 @@
         <div class="price">PRICE : Rp 100.000 ,00</div>
 
         <div class="button-list">
-            <a href="form.html" class="button edit">edit</a>
-            <a href="list.html" class="button delete">delete</a>
+            <a href="#" class="button edit">edit</a>
+            <a href="#" class="button delete">delete</a>
         </div>
     </div>
 @endsection

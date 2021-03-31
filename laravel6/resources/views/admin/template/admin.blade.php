@@ -23,7 +23,7 @@
             </a>
 
             <div id="sidebar-menu">
-                <a href="{{ route('game.index') }}" class="menu {{ $page == 'game' ? 'active' : '' }}">
+                <a href="{{ route('book.index') }}" class="menu {{ $page == 'game' ? 'active' : '' }}">
                     @if ($page == 'game')
                         <img src="{{ url('assets/image/game-active') }}.png" alt="">
                     @else
@@ -39,16 +39,16 @@
                     @endif
                 </a>
 
-                <a href="" class="menu">
+                <a href="{{ route('book.index') }}" class="menu">
                     <img src="{{ url('assets/image/movie.png') }}" alt="">
                 </a>
 
-                <a href="" class="menu">
+                <a href="{{ route('book.index') }}" class="menu">
                     <img src="{{ url('assets/image/music.png') }}" alt="">
                 </a>
             </div>
 
-            <a href="" id="sidebar-profile">
+            <a href="#" id="sidebar-profile">
                 <img src="{{ url('assets/image/profile.png') }}" alt="">
             </a>
         </div>

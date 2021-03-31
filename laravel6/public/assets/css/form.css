@@ -44,7 +44,8 @@ form .form-group>* {
 
 .form-group .form-field {
     background: #C4C4C4;
-    border: 1px solid rgba(10, 16, 13, 0.6);
+    border: none;
+    outline: none;
     border-radius: 5px;
     padding: 5px 10px;
 
@@ -55,10 +56,6 @@ form .form-group>* {
     color: rgba(10, 16, 13, 0.822);
 }
 
-.form-group .form-field:focus {
-    border: 1.5px solid rgba(10, 16, 13, 0.6);
-    color: rgba(10, 16, 13, 0.822);
-}
 
 select::after {
     content: "";

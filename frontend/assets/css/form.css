@@ -4,13 +4,18 @@
     --select-arrow: var(--select-border);
 }
 
+.content #content-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .content #content-inner form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     gap: 20px;
-    width: 50%;
+    width: 100%;
 }
 
 form .form-group {
@@ -39,7 +44,8 @@ form .form-group>* {
 
 .form-group .form-field {
     background: #C4C4C4;
-    border: 1px solid rgba(10, 16, 13, 0.6);
+    border: none;
+    outline: none;
     border-radius: 5px;
     padding: 5px 10px;
 
@@ -50,10 +56,6 @@ form .form-group>* {
     color: rgba(10, 16, 13, 0.822);
 }
 
-.form-group .form-field:focus {
-    border: 1.5px solid rgba(10, 16, 13, 0.6);
-    color: rgba(10, 16, 13, 0.822);
-}
 
 select::after {
     content: "";
@@ -137,6 +139,16 @@ input[type="file"i] {
 
     transition: all ease 0.3s;
 }
+
 .form-group.submit button:hover {
     transform: translateX(5px);
+}
+
+@media (max-width: 767px) {
+    .content #content-inner {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+    }
 }
