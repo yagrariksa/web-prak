@@ -15,3 +15,8 @@ Route::get('/', function () {
     // return view('welcome');
     return redirect('admin');
 });
+
+Route::get('/login','TestController@login');
+// Route::get('/register','TestController@register');
+Route::get('/forgotpassword','TestController@forgotpassword');
+Route::get('/resetpassword','TestController@resetpassword');

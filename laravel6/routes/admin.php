@@ -17,6 +17,10 @@ Route::get('/', function () {
     ]);
 })->name('admin.home');
 
+Route::get('/login','AuthController@index')->name('admin.login');
+Route::get('/register','AuthController@craete')->name('admin.register');
+Route::get('/forgotpassword','AuthController@forgotpassword')->name('admin.forgotpassword');
+
 Route::prefix('book')->group(function(){
     Route::get('/','BookController@index')->name('book.index');
     Route::get('/show/{id}','BookController@show')->name('book.show');
