@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create</title>
+
+    <!-- styling -->
+    <link rel="stylesheet" href="css-admin/style.css">
+    <link rel="stylesheet" href="css-admin/nav.css">
+    <link rel="stylesheet" href="css-admin/create.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <div class="top">
+            <div class="header">
+                <span class="title">TumbasBarang
+                </span>
+                <span class="subtitle">Admin</span>
+            </div>
+            <div class="menu">
+                <div class="menu-group">
+                    <span class="menu-title">
+                        Game
+                        <hr>
+                    </span>
+                    <a href="#" class="menu-a active">Tambah Game</a>
+                    <a href="#" class="menu-a">List Game</a>
+                    <a href="#" class="menu-a">Tambah Author</a>
+                    <a href="#" class="menu-a">List Author</a>
+                </div>
+                <div class="menu-group">
+                    <span class="menu-title">
+                        Book
+                        <hr>
+                    </span>
+                    <a href="#" class="menu-a">Tambah Book</a>
+                    <a href="#" class="menu-a">List Book</a>
+                    <a href="#" class="menu-a">Tambah Writer</a>
+                    <a href="#" class="menu-a">List Writer</a>
+                </div>
+                <div class="menu-group">
+                    <span class="menu-title">
+                        Movie
+                        <hr>
+                    </span>
+                    <a href="#" class="menu-a">Tambah Movie</a>
+                    <a href="#" class="menu-a">List Movie</a>
+                    <a href="#" class="menu-a">Tambah Producer</a>
+                    <a href="#" class="menu-a">List Producer</a>
+                </div>
+                <div class="menu-group">
+                    <span class="menu-title">
+                        Music
+                        <hr>
+                    </span>
+                    <a href="#" class="menu-a">Tambah Music</a>
+                    <a href="#" class="menu-a">List Music</a>
+                    <a href="#" class="menu-a">Tambah Singer</a>
+                    <a href="#" class="menu-a">List Singer</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="footer">
+            Logout
+        </a>
+    </div>
+    <div class="content">
+        <span class="page-title">
+            Create Product
+        </span>
+        <span class="page-subtitle">
+            add new product to promote for customer
+        </span>
+
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="" id="name">
+            </div>
+            <div class="form-group">
+                <label for="exampleTwo">Book Author</label>
+                <select name="" id="exampleTwo" class="form-field">
+                    <option value="satu">satu</option>
+                    <option value="dua">dua</option>
+                    <option value="tiga">tiga</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="example3">Book Desc</label>
+                <textarea name="" id="example3" class="form-field"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="example4">Book Price</label>
+                <input class="form-field" type="number" id="example4" placeholder="Book Price">
+            </div>
+
+            <div class="form-group">
+                <label for="dicoucker">Upload</label>
+                <input class="custom-file-input form-field" type="file" id="docpicker" accept=".jpg,.jpeg,.png">
+            </div>
+            <button type="submit" class="btn-submit btn-grad">
+                Create
+            </button>
+        </form>
+    </div>
+
+</body>
+
+</html>

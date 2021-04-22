@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+
+    <!-- styling -->
+    <link rel="stylesheet" href="css-admin/style.css">
+    <link rel="stylesheet" href="css-admin/nav.css">
+    <link rel="stylesheet" href="css-admin/list.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <div class="top">
+            <div class="header">
+                <span class="title">TumbasBarang
+                </span>
+                <span class="subtitle">Admin</span>
+            </div>
+            <div class="menu">
+                <div class="menu-group">
+                    <span class="menu-title">
+                        Game
+                        <hr>
+                    </span>
+                    <a href="#" class="menu-a active">Tambah Game</a>
+                    <a href="#" class="menu-a">List Game</a>
+                    <a href="#" class="menu-a">Tambah Author</a>
+                    <a href="#" class="menu-a">List Author</a>
+                </div>
+                <div class="menu-group">
+                    <span class="menu-title">
+                        Book
+                        <hr>
+                    </span>
+                    <a href="#" class="menu-a">Tambah Book</a>
+                    <a href="#" class="menu-a">List Book</a>
+                    <a href="#" class="menu-a">Tambah Writer</a>
+                    <a href="#" class="menu-a">List Writer</a>
+                </div>
+                <div class="menu-group">
+                    <span class="menu-title">
+                        Movie
+                        <hr>
+                    </span>
+                    <a href="#" class="menu-a">Tambah Movie</a>
+                    <a href="#" class="menu-a">List Movie</a>
+                    <a href="#" class="menu-a">Tambah Producer</a>
+                    <a href="#" class="menu-a">List Producer</a>
+                </div>
+                <div class="menu-group">
+                    <span class="menu-title">
+                        Music
+                        <hr>
+                    </span>
+                    <a href="#" class="menu-a">Tambah Music</a>
+                    <a href="#" class="menu-a">List Music</a>
+                    <a href="#" class="menu-a">Tambah Singer</a>
+                    <a href="#" class="menu-a">List Singer</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="footer">
+            Logout
+        </a>
+    </div>
+    <div class="content">
+        <span class="page-title">
+            List Product
+        </span>
+        <span class="page-subtitle">
+            daftar produk yang dipasarkan kepada customer
+        </span>
+
+        <div class="grid-system">
+            <div class="card">
+                <div class="card-img">
+                    <img src="img/hujan.jpg" alt="">
+                </div>
+                <div class="card-body">
+                    <span class="card-title">Title</span>
+                    <span class="card-desc">
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Repudiandae,
+                        esse.</span>
+                    <span class="card-auth">Author</span>
+                    <span class="card-price"></span>
+                    <span class="card-action">
+                        <a href="#" class="btn-edit btn-badge">Edit</a>
+                        <a href="#" class="btn-delete btn-badge modal-btn-trigger"
+                        data-modal="#modal-delete" data-title="title">Delete</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hide" id="modal-delete">
+        <div class="modal-box">
+            <div class="modal-head">
+                <span class="modal-title">Delete</span>
+                <span class="modal-close">X</span>
+            </div>
+            <div class="modal-body">
+                Apakah Anda yakin menghapus item ?
+            </div>
+            <div class="modal-foot">
+                <span class="btn-cancel">Batalkan</span>
+                <span class="btn-delete">Hapus</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js-admin/list.js"></script>
+</body>
+
+</html>
