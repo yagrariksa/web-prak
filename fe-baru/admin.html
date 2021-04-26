@@ -19,6 +19,9 @@
 
 <body>
 
+    <div class="topnav">
+        menu
+    </div>
     <div class="sidenav">
         <div class="top">
             <div class="header">
@@ -28,10 +31,12 @@
             </div>
             <div class="menu">
                 <div class="menu-group">
-                    <span class="menu-title">
+                    <span class="menu-title collapse">
                         Game
-                        <hr>
+                        <span class="col-positive">+</span>
+                        <span class="col-negative">-</span>
                     </span>
+                    <hr>
                     <a href="#" class="menu-a active">Tambah Game</a>
                     <a href="#" class="menu-a">List Game</a>
                     <a href="#" class="menu-a">Tambah Author</a>
@@ -40,8 +45,10 @@
                 <div class="menu-group">
                     <span class="menu-title">
                         Book
-                        <hr>
+                        <span class="col-positive">+</span>
+                        <span class="col-negative">-</span>
                     </span>
+                    <hr>
                     <a href="#" class="menu-a">Tambah Book</a>
                     <a href="#" class="menu-a">List Book</a>
                     <a href="#" class="menu-a">Tambah Writer</a>
@@ -50,8 +57,10 @@
                 <div class="menu-group">
                     <span class="menu-title">
                         Movie
-                        <hr>
+                        <span class="col-positive">+</span>
+                        <span class="col-negative">-</span>
                     </span>
+                    <hr>
                     <a href="#" class="menu-a">Tambah Movie</a>
                     <a href="#" class="menu-a">List Movie</a>
                     <a href="#" class="menu-a">Tambah Producer</a>
@@ -60,12 +69,23 @@
                 <div class="menu-group">
                     <span class="menu-title">
                         Music
-                        <hr>
+                        <span class="col-positive">+</span>
+                        <span class="col-negative">-</span>
                     </span>
+                    <hr>
                     <a href="#" class="menu-a">Tambah Music</a>
                     <a href="#" class="menu-a">List Music</a>
                     <a href="#" class="menu-a">Tambah Singer</a>
                     <a href="#" class="menu-a">List Singer</a>
+                </div>
+                <div class="menu-group">
+                    <span class="menu-title">
+                        Lain-Lain
+                        <span class="col-positive">+</span>
+                        <span class="col-negative">-</span>
+                    </span>
+                    <hr>
+                    <a href="#" class="menu-a">Daftar Order</a>
                 </div>
             </div>
         </div>
@@ -75,6 +95,24 @@
         </a>
     </div>
     <div class="content">
+        <span class="page-title">Judul Halaman</span>
+        <span class="page-subtitle">Sedikit uraian untuk penjelasan tentang halaman</span>
+
+        <div class="flash success">
+            Sukses
+        </div>
+
+        <div class="flash error">
+            Error
+        </div>
+
+        <div class="flash info">
+            info
+        </div>
+
+        <div class="flash warning">
+            Warning
+        </div>
         <h1>content-h1</h1>
         <h2>content-h2</h2>
         <h3>content-h3</h3>
@@ -82,6 +120,8 @@
         <h5>content-h5</h5>
     </div>
 
+
+    <script src="js-admin/nav.js"></script>
 </body>
 
 </html>

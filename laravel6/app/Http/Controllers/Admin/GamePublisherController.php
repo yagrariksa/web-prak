@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Admin;
 use App\Http\Controllers\Controller;
+use App\Models\GamePublisher;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
-class AuthController extends Controller
+class GamePublisherController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +16,11 @@ class AuthController extends Controller
      */
     public function index()
     {
-        return view('admin.auth.login');
+        $publisher = GamePublisher::get();
+
+        return view('admin.game.publisher.index', [
+            'data' => $publisher
+        ]);
     }
 
     /**
@@ -28,7 +30,7 @@ class AuthController extends Controller
      */
     public function create()
     {
-        return view('admin.auth.register');
+        return view('admin.game.publisher.create');
     }
 
     /**
@@ -39,23 +41,25 @@ class AuthController extends Controller
      */
     public function store(Request $request)
     {
-        $admin = Admin::where('email', $request->email)->first();
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+        ]);
 
-        if (!$admin) {
-            return redirect()->back()->withErrors([
-                'email' => ['Akun tidak ditemukan'],
-            ])->withInput($request->input());
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        if (!Hash::check($request->password, $admin->password)) {
-            return redirect()->back()->withErrors([
-                'password' => ['Password tidak cocok'],
-            ])->withInput($request->input());
+        $publisher = GamePublisher::create([
+            'name' => $request->name,
+        ]);
+
+        if ($publisher) {
+            session()->flash('success', 'Sukses menambahkan publisher');
+        } else {
+            session()->flash('error', 'Gagal menambahkan publisher');
         }
 
-        Session::put('admin.login',true);
-        Session::put('admin.akun',$admin);
-        return redirect()->route('admin.home');
+        return redirect()->route('game.publisher.index');
     }
 
     /**
@@ -77,7 +81,6 @@ class AuthController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
@@ -89,7 +92,14 @@ class AuthController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $publisher = GamePublisher::find($id);
+
+        $publisher->update([
+            'name' => $request->name,
+        ]);
+
+        session()->flash('success','Berhasil mengupdate data');
+        return redirect()->back();
     }
 
     /**
@@ -100,16 +110,10 @@ class AuthController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
+        GamePublisher::find($id)->delete();
 
-    public function forgotpassword()
-    {
-        return view('admin.auth.passwords.email');
-    }
+        session()->flash('success','Berhasil menghapus data');
 
-    public function resetpassword()
-    {
-        return view('admin.auth.passwords.reset');
+        return redirect()->back();
     }
 }

@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - <?php echo $__env->yieldContent('title'); ?></title>
+    <title>Admin</title>
 
     <!-- styling -->
-    <link rel="stylesheet" href="<?php echo e(url('assets/css-admin/style.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(url('assets/css-admin/nav.css')); ?>">
+    <link rel="stylesheet" href="css-admin/style.css">
+    <link rel="stylesheet" href="css-admin/nav.css">
+    <link rel="stylesheet" href="css-admin/table.css">
+    <link rel="stylesheet" href="css-admin/create.css">
+
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-
-    <?php echo $__env->yieldContent('head'); ?>
 </head>
 
 <body>
@@ -39,10 +40,10 @@
                         <span class="col-negative">-</span>
                     </span>
                     <hr>
-                    <a href="<?php echo e(route('game.create')); ?>" class="menu-a" id="game-add">Tambah Game</a>
-                    <a href="<?php echo e(route('game.index')); ?>" class="menu-a" id="game-list">List Game</a>
-                    <a href="<?php echo e(route('game.publisher.create')); ?>" class="menu-a" id="game-pub-add">Tambah Publisher</a>
-                    <a href="<?php echo e(route('game.publisher.index')); ?>" class="menu-a" id="game-pub-list">List Publisher</a>
+                    <a href="#" class="menu-a active">Tambah Game</a>
+                    <a href="#" class="menu-a">List Game</a>
+                    <a href="#" class="menu-a">Tambah Author</a>
+                    <a href="#" class="menu-a">List Author</a>
                 </div>
                 <div class="menu-group">
                     <span class="menu-title">
@@ -87,54 +88,59 @@
                         <span class="col-negative">-</span>
                     </span>
                     <hr>
-                    <a href="<?php echo e(route('other.order')); ?>" class="menu-a" id="order-list">Daftar Order</a>
+                    <a href="#" class="menu-a">Daftar Order</a>
                 </div>
             </div>
         </div>
 
-        <a href="<?php echo e(route('admin.logout')); ?>" class="footer">
+        <a href="#" class="footer">
             Logout
         </a>
     </div>
     <div class="content">
-        <span class="page-title"><?php echo $__env->yieldContent('page-title'); ?></span>
-        <span class="page-subtitle"><?php echo $__env->yieldContent('page-subtitle'); ?></span>
+        <span class="page-title">Tabel</span>
+        <span class="page-subtitle">Tabel digunakan untuk menampilkan sesuatu yang penting</span>
 
-
-        <?php if($message = Session::get('success')): ?>
-        <div class="flash success">
-            <?php echo e($message); ?>
-
+        <div class="table-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Publisher</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td class="content-single-table" data-id="1">EA</td>
+                        <td>
+                            <span class="btn-edit">Edit</span>
+                            <span class="btn-delete" data-url="#">Delete</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <form action="#" class="hide" id="form-edit">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="namme" id="name">
+                </div>
+                <input type="hidden" name="id" id="id">
+                <button type="submit" class="btn-submit btn-grad">
+                    Edit
+                </button>
+            </form>
         </div>
-        <?php endif; ?>
 
-        <?php if($message = Session::get('error')): ?>
-        <div class="flash error">
-            <?php echo e($message); ?>
-
-        </div>
-        <?php endif; ?>
-
-        <?php if($message = Session::get('info')): ?>
-        <div class="flash info">
-            <?php echo e($message); ?>
-
-        </div>
-        <?php endif; ?>
-
-        <?php if($message = Session::get('warning')): ?>
-        <div class="flash warning">
-            <?php echo e($message); ?>
-
-        </div>
-        <?php endif; ?>
-
-        <?php echo $__env->yieldContent('content'); ?>
+        <form class="hide" action="#" id="form-delete">
+            <input type="hidden" name="chack" value="hey">
+        </form>
     </div>
 
 
-    <?php echo $__env->yieldContent('js'); ?>
-    <script src="<?php echo e(url('assets/js-admin/nav.js')); ?>"></script>
+    <script src="js-admin/nav.js"></script>
+    <script src="js-admin/table.js"></script>
 </body>
 
-</html><?php /**PATH /home/yagrariksa/Documents/KULIAH/WEB_PRAK/laravel6/resources/views/admin/template/admin.blade.php ENDPATH**/ ?>
+</html>

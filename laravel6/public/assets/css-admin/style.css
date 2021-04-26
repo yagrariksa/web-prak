@@ -172,6 +172,10 @@ span.page-subtitle {
     display: none;
 }
 
+.error {
+    color: red;
+}
+
 .flash {
     padding: 10px 20px;
     border-radius: 4px;
@@ -187,6 +191,7 @@ span.page-subtitle {
 .flash.error {
     background-color: #F94C4C;
     border: 1px solid #C52121;
+    color: #0f0f0f;
 }
 
 .flash.info {
